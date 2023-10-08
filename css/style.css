@@ -1,0 +1,451 @@
+@font-face { 
+  font-family: "TT Lakes";
+  src: url("font/TTLakes/TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
+    url("font/TTLakes/TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
+    url("font/TTLakes/TTLakes-Bold.woff") format("woff"),
+    url("font/TTLakes/TTLakes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("font/TTLakes/TTLakes-Medium.eot");
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"),
+    url("font/TTLakes/TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
+    url("font/TTLakes/TTLakes-Medium.woff") format("woff"),
+    url("font/TTLakes/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("font/TTLakes/TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"),
+    url("font/TTLakes/TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
+    url("font/TTLakes/TTLakes-Regular.woff") format("woff"),
+    url("font/TTLakes/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  color: #f8f8f8;
+  font-family: "TT Lakes", "Arial", "sans-serif";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  min-width: 320px;
+}
+.wrap__container {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  min-height: auto;
+  max-width: 1120px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: white;
+  border-bottom: 1px solid #b8ffec;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 0;
+}
+.header__logo {
+  height: 50.815px;
+}
+
+.header__item--logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  gap: 15px;
+}
+
+.header__item--tablet {
+  display: none;
+}
+
+.header__item--mobile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__item--mobile::before {
+  content: "";
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background-color: #eaeaea;
+}
+
+main {
+  max-width: 100%;
+}
+.abt-company-img {
+  max-width: 581px;
+  max-height: 380px;
+  overflow: hidden;
+}
+.abt-company-img img {
+  width: 100%;
+  height: 100%;
+}
+.center__wrap {
+  display: block;
+  margin: 0 auto;
+  max-width: 1120px;
+}
+.menu {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.title-container {
+  display: flex;
+  width: 100%;
+  margin: 24px 0;
+  margin-left: 0;
+  align-items: flex-end;
+}
+.desktop {
+  display: none;
+}
+
+.title {
+  color: #1b1c21;
+  font-family: "TT Lakes";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -0.6px;
+  min-height: 40px;
+  align-items: flex-start;
+}
+
+.menu__title {
+  display: flex;
+  gap: 12px;
+}
+
+.menu__title::before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+}
+
+.nav {
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 8px 16px;
+}
+.nav__list::-webkit-scrollbar {
+  display: none;
+}
+.nav__item {
+  list-style: none;
+}
+.nav__item.last {
+  margin-top: 10px;
+}
+
+.nav__button {
+  color: #7e7e82;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  padding: 0 14px;
+  border-radius: 6px;
+}
+
+.nav__button--active {
+  border-color: #b8ffec;
+  background: #fff;
+}
+.nav__button--brand {
+  display: none;
+}
+.abt-company {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 48px;
+}
+.abt-company__info {
+  display: flex;
+  flex-wrap: wrap;
+  color: #1b1c21;
+  font-family: "TT Lakes";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+  min-height: 90px;
+}
+.abt-company__wrapper {
+  padding-left: 24px;
+}
+.abt-company__wrapper p:nth-child(2),
+.abt-company__wrapper p:nth-child(3) {
+  display: none;
+}
+
+.abt-company-img {
+  width: 100vw;
+  height: auto;
+}
+
+.btn__readmore {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  color: #1b1c21;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0 14px;
+  border-radius: 6px;
+}
+.btn__readmore::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='ic/expand'%3E%3Cpath id='icon' fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.abt-company-img {
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .header__item--tablet {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .header__item--logo::before {
+    content: "";
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: #eaeaea;
+  }
+
+  .nav__item:nth-child(7) {
+    order: 7;
+  }
+  .nav__item:nth-child(5) {
+    order: 4;
+  }
+  .abt-company {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    min-width: 50vh;
+    margin-right: 40px;
+  }
+  .abt-company__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .abt-company__wrapper p:nth-child(1),
+  .abt-company__wrapper p:nth-child(2) {
+    display: block;
+  }
+  .abt-company__wrapper p:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  .abt-company__wrapper p:nth-child(3) {
+    display: none;
+  }
+  .text__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn__readmore {
+    padding: 0;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .btn__readmore::before {
+    content: "";
+    margin-right: 8px;
+    margin-left: 25px;
+  }
+
+  .abt-company-img a img {
+  }
+}
+
+@media (min-width: 1120px) {
+  body {
+    min-width: 1120px;
+  }
+
+  .header {
+    display: none;
+  }
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav__list {
+    padding: 8px 22px;
+  }
+  .nav__button--brand {
+    display: block;
+  }
+  .nav__button--devices {
+    display: block;
+    border: hidden;
+  }
+  .request-text,
+  .status-container {
+    color: #1b1c21;
+    text-align: right;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+  }
+  .menu__title::before {
+    width: 3px;
+    margin-right: 30px;
+    background-position-x: left;
+    background-position-y: center;
+  }
+  .container {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 450px;
+  }
+
+  .request-container {
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+  }
+
+  .request-text {
+    margin-right: 16px;
+  }
+
+  .status-container {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+  }
+
+  .status-text {
+    margin-right: 16px;
+  }
+
+  .nav__list {
+    flex-wrap: wrap !important;
+    padding: 8px 22px;
+  }
+  .nav__item:nth-child(5) {
+    order: 5;
+  }
+
+  .nav__item:nth-child(4) {
+    order: 3;
+  }
+
+  .nav__item:nth-child(6) {
+    order: 6;
+  }
+  .nav__item:nth-child(3) {
+    display: none;
+  }
+  .abt-company__wrapper p:nth-child(1),
+  .abt-company__wrapper p:nth-child(2),
+  .abt-company__wrapper p:nth-child(3) {
+    display: block;
+    white-space: wrap;
+  }
+}
