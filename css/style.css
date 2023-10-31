@@ -1,73 +1,227 @@
-@font-face { 
-  font-family: "TT Lakes";
-  src: url("font/TTLakes/TTLakes-Bold.eot");
-  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
-    url("font/TTLakes/TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
-    url("font/TTLakes/TTLakes-Bold.woff") format("woff"),
-    url("font/TTLakes/TTLakes-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;  
-}
-
 @font-face {
-  font-family: "TT Lakes";
-  src: url("font/TTLakes/TTLakes-Medium.eot");
+  font-family: "TT Lakes-Medium";
+  src: url("../fonts/TTLakes-Medium.eot");
   src: local("TT Lakes Medium"), local("TTLakes-Medium"),
-    url("font/TTLakes/TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
-    url("font/TTLakes/TTLakes-Medium.woff") format("woff"),
-    url("font/TTLakes/TTLakes-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+    url("../fonts/TTLakes-Medium.eot?#infix") format("embedded-opentype"),
+    url("../fonts/TTLakes-Medium.woff") format("woff"),
+    url("../fonts/TTLakes-Medium.ttf") format("truetype");
 }
-
 @font-face {
-  font-family: "TT Lakes";
-  src: url("font/TTLakes/TTLakes-Regular.eot");
+  font-family: "TT Lakes-Regular";
+  src: url("../fonts/TTLakes-Regular.eot");
   src: local("TT Lakes Regular"), local("TTLakes-Regular"),
-    url("font/TTLakes/TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
-    url("font/TTLakes/TTLakes-Regular.woff") format("woff"),
-    url("font/TTLakes/TTLakes-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    url("../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TTLakes-Regular.woff") format("woff"),
+    url("../fonts/TTLakes-Regular.ttf") format("truetype");
 }
-
-html {
-  box-sizing: border-box;
+@font-face {
+  font-family: "TT Lakes-Bold";
+  src: url("../fonts/TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
+    url("../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TTLakes-Bold.woff") format("woff"),
+    url("../fonts/TTLakes-Bold.ttf") format("truetype");
 }
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-h6 {
+
+body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  background-color: #fff;
 }
-ul,
-li {
+
+html {
+  font-family: "TT Lakes-Medium", "Arial", "sans-serif";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color: #1b1c21;
+}
+
+.wrapper-page {
+  width: 320px;
+  font-family: "TT Lakes-Medium", sans-serif;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+.header-page {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+
+} 
+
+.header-page__list {
+  display: flex;
+   margin: 0; 
+   padding: 0; 
+   padding: 18px 24px 46px 24px;
+   list-style: none; 
+ 
+}
+
+.header-page__link--btn{
+  margin-right: 15px;
+}
+.logo {
+  /* margin-right: 20px; */
+}
+.header-page__wrapper{
+  display:flex;
+  align-items: center;
+  justify-items:flex-start;
+  
+  
+}
+.search-item {
+  /* margin-left: 8px; */
+  margin-right: 16px;
+  margin-left: 78px;
+  margin-top: 9px;
+  justify-items: flex-end;
+  
+}
+a {
+  color: #1b1c21;
+  text-decoration: none;
+}
+
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px 0 0;
+}
+
+.main-nav__logo {
+  align-self: flex-start;
+}
+.main-nav__list {
+  overflow-y: auto;
+  min-height: 24px;
+  font-weight: 500;
+  list-style: none;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-body {
-  margin: 0;
-  color: #f8f8f8;
-  font-family: "TT Lakes", "Arial", "sans-serif";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-  min-width: 320px;
+.main-nav__item {
+  margin-bottom: 24px;
+  padding: 0 24px;
 }
+.link:hover {
+  color: #ff3e79;
+  transition: color 0.4s, box-shadow 0.2s 0.3s;
+}
+.is-active::before {
+  content: "";
+  height: 32px;
+  width: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 4%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+  color: #41f6d7;
+}
+
+.is-active {
+  display: flex;
+  align-items: center;
+  color: #7e7e82;
+  gap: 20px;
+}
+
+.footer {
+  align-items: flex-end;
+  margin-top: 40%;
+}
+.address__tel-link {
+  display: block;
+  font-family: "TT lakes-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 12px;
+  padding-bottom: 40px;
+  color: black;
+  text-decoration: none;
+}
+.address__mail-link {
+  font-family: "TT Lakes";
+  font-style: normal;
+  color: #1B1C21;
+  text-decoration: none;
+  margin-top: 16px;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing: -0.2px;
+
+}
+
+.main-nav__contact-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.contact-menu__item {
+  margin-right: 16px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: none;
+  margin-bottom: 8px;
+  font-style: normal;
+  margin: 0 0 0 24px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  
+}
+.address__mail-link {
+  margin-bottom: 16px;
+  font-weight: 500;
+  ont-family: "TT Lakes-Medium";
+  letter-spacing: -0.2px;
+}
+.address__tel-link {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+ 
+}
+.lang {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0 0 32px 24px;
+
+}
+.lang__item {
+  margin-right: 8px;
+}
+.lang-active {
+  color: #7e7e82;
+}
+
 .wrap__container {
   display: flex;
   justify-content: center;
@@ -103,12 +257,14 @@ body {
 
 .header__item--tablet {
   display: none;
+  list-style: none;
 }
 
 .header__item--mobile {
   display: flex;
   align-items: center;
   gap: 15px;
+  list-style: none;
 }
 
 .header__item--mobile::before {
@@ -142,11 +298,7 @@ main {
 }
 
 .title-container {
-  display: flex;
-  width: 100%;
-  margin: 24px 0;
-  margin-left: 0;
-  align-items: flex-end;
+  display: none;
 }
 .desktop {
   display: none;
@@ -201,7 +353,7 @@ main {
   margin-top: 10px;
 }
 
-.nav__button {
+.nav__link {
   color: #7e7e82;
   border: none;
   background-color: transparent;
@@ -216,11 +368,11 @@ main {
   border-radius: 6px;
 }
 
-.nav__button--active {
+.nav__link--active {
   border-color: #b8ffec;
   background: #fff;
 }
-.nav__button--brand {
+.nav__link--brand {
   display: none;
 }
 .abt-company {
@@ -237,7 +389,7 @@ main {
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px; 
   letter-spacing: 0.2px;
   min-height: 90px;
 }
@@ -254,7 +406,7 @@ main {
   height: auto;
 }
 
-.btn__readmore {
+.abt-company__btn-readmore {
   display: flex;
   align-items: center;
   min-height: 24px;
@@ -267,7 +419,7 @@ main {
   padding: 0 14px;
   border-radius: 6px;
 }
-.btn__readmore::before {
+.abt-company__btn-readmore::before {
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='ic/expand'%3E%3Cpath id='icon' fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3E%3C/g%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -291,6 +443,9 @@ main {
   .container {
     padding: 0 24px;
   }
+  .title-container {
+    display: none;
+  }
   .header__item--tablet {
     display: flex;
     align-items: center;
@@ -312,15 +467,16 @@ main {
   }
   .abt-company {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 48px;
     min-width: 50vh;
     margin-right: 40px;
   }
   .abt-company__info {
+    
     flex-direction: column;
-    align-items: flex-start;
-  }
+    align-items: flex-start; 
+  } 
 
   .abt-company__wrapper p:nth-child(1),
   .abt-company__wrapper p:nth-child(2) {
@@ -332,24 +488,40 @@ main {
   .abt-company__wrapper p:nth-child(3) {
     display: none;
   }
-  .text__btn {
+  .abt-company__btn-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .btn__readmore {
+  .abt-company__btn-readmore {
     padding: 0;
     margin-top: 10px;
     align-items: center;
     justify-content: flex-start;
   }
-  .btn__readmore::before {
+  .abt-company__btn-readmore::before {
     content: "";
     margin-right: 8px;
     margin-left: 25px;
   }
-
-  .abt-company-img a img {
+  .abt-company__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .abt-company__info-text {
+    flex: 1;
+  }
+  
+  .abt-company__img {
+    flex: 1;
+    text-align: center; 
+  }
+  
+  .abt-company__img img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -374,10 +546,10 @@ main {
   nav__list {
     padding: 8px 22px;
   }
-  .nav__button--brand {
+  .nav__link--brand {
     display: block;
   }
-  .nav__button--devices {
+  .nav__link--devices {
     display: block;
     border: hidden;
   }
@@ -448,4 +620,37 @@ main {
     display: block;
     white-space: wrap;
   }
+  .abt-company__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .abt-company__info-text {
+    flex: 1;
+  }
+  
+  .abt-company__img {
+    flex: 1;
+    text-align: center; 
+  }
+  
+  .abt-company__img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FF3E79;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 }
