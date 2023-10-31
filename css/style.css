@@ -1,27 +1,27 @@
 @font-face {
-  font-family: "TT Lakes-Medium";
-  src: url("../fonts/TTLakes-Medium.eot");
-  src: local("TT Lakes Medium"), local("TTLakes-Medium"),
-    url("../fonts/TTLakes-Medium.eot?#infix") format("embedded-opentype"),
-    url("../fonts/TTLakes-Medium.woff") format("woff"),
-    url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Regular.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-  font-family: "TT Lakes-Regular";
-  src: url("../fonts/TTLakes-Regular.eot");
-  src: local("TT Lakes Regular"), local("TTLakes-Regular"),
-    url("../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/TTLakes-Regular.woff") format("woff"),
-    url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Medium.ttf") format("TrueType");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-  font-family: "TT Lakes-Bold";
-  src: url("../fonts/TTLakes-Bold.eot");
-  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
-    url("../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/TTLakes-Bold.woff") format("woff"),
-    url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Bold.ttf") format("TrueType");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
+
 *,
 *::before,
 *::after {
@@ -39,7 +39,8 @@ body {
 }
 
 html {
-  font-family: "TT Lakes-Medium", "Arial", "sans-serif";
+  font-family: "TTLakes", "Arial", "sans-serif";
+  font-weight: 500;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -49,46 +50,46 @@ html {
 
 .wrapper-page {
   width: 320px;
-  font-family: "TT Lakes-Medium", sans-serif;
+  font-family: "TTLakes", sans-serif;
+  font-weight: 500;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 }
 .header-page {
   display: flex;
   align-items: center;
-  justify-content:space-between;
-
-} 
+  justify-content: space-between;
+}
 
 .header-page__list {
   display: flex;
-   margin: 0; 
-   padding: 0; 
-   padding: 18px 24px 46px 24px;
-   list-style: none; 
- 
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding: 18px 24px 46px 24px;
+  list-style: none;
 }
 
-.header-page__link--btn{
+.header-page__link img {
+  display: block;
+}
+
+.header-page__link--btn {
   margin-right: 15px;
 }
 .logo {
   /* margin-right: 20px; */
 }
-.header-page__wrapper{
-  display:flex;
+.header-page__wrapper {
+  display: flex;
   align-items: center;
-  justify-items:flex-start;
-  
-  
+  justify-items: flex-start;
 }
 .search-item {
   /* margin-left: 8px; */
   margin-right: 16px;
   margin-left: 78px;
-  margin-top: 9px;
   justify-items: flex-end;
-  
 }
 a {
   color: #1b1c21;
@@ -150,7 +151,7 @@ a {
 }
 .address__tel-link {
   display: block;
-  font-family: "TT lakes-Bold", sans-serif;
+  font-family: "TTLakes-Bold", sans-serif;
   font-size: 24px;
   line-height: 32px;
   padding-top: 12px;
@@ -159,15 +160,14 @@ a {
   text-decoration: none;
 }
 .address__mail-link {
-  font-family: "TT Lakes";
+  font-family: "TTLakes";
   font-style: normal;
-  color: #1B1C21;
+  color: #1b1c21;
   text-decoration: none;
   margin-top: 16px;
-  font-size:16px;
-  line-height:24px;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: -0.2px;
-
 }
 
 .main-nav__contact-menu {
@@ -181,6 +181,10 @@ a {
 .contact-menu__item {
   margin-right: 16px;
 }
+
+.contact-menu__link img {
+  display: block;
+}
 .address {
   display: flex;
   flex-direction: column;
@@ -191,19 +195,18 @@ a {
   margin: 0 0 0 24px;
   padding: 0;
   background-color: rgba(255, 255, 255, 0);
-  
 }
 .address__mail-link {
   margin-bottom: 16px;
   font-weight: 500;
-  ont-family: "TT Lakes-Medium";
+  font-family: "TTLakes";
+  font-weight: 500;
   letter-spacing: -0.2px;
 }
 .address__tel-link {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
- 
 }
 .lang {
   display: flex;
@@ -212,8 +215,7 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   list-style: none;
-  margin: 0 0 32px 24px;
-
+  padding: 0 0 32px 24px;
 }
 .lang__item {
   margin-right: 8px;
@@ -246,6 +248,10 @@ a {
 }
 .header__logo {
   height: 50.815px;
+}
+
+.header__link img {
+  display: block;
 }
 
 .header__item--logo {
@@ -306,7 +312,7 @@ main {
 
 .title {
   color: #1b1c21;
-  font-family: "TT Lakes";
+  font-family: "TTLakes";
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -385,25 +391,35 @@ main {
   display: flex;
   flex-wrap: wrap;
   color: #1b1c21;
-  font-family: "TT Lakes";
+  font-family: "TTLakes";
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  line-height: 20px; 
+  line-height: 20px;
   letter-spacing: 0.2px;
   min-height: 90px;
 }
 .abt-company__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
 }
 .abt-company__wrapper p:nth-child(2),
 .abt-company__wrapper p:nth-child(3) {
   display: none;
 }
 
-.abt-company-img {
+.abt-company__img {
   width: 100vw;
   height: auto;
+  margin-left: -24px;
+}
+
+.abt-company__img img {
+  width: 100%;
 }
 
 .abt-company__btn-readmore {
@@ -470,13 +486,12 @@ main {
     flex-direction: column;
     gap: 48px;
     min-width: 50vh;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   }
   .abt-company__info {
-    
     flex-direction: column;
-    align-items: flex-start; 
-  } 
+    align-items: flex-start;
+  }
 
   .abt-company__wrapper p:nth-child(1),
   .abt-company__wrapper p:nth-child(2) {
@@ -507,20 +522,22 @@ main {
   .abt-company__wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
   }
-  
+
   .abt-company__info-text {
     flex: 1;
   }
-  
+
   .abt-company__img {
     flex: 1;
-    text-align: center; 
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
   }
-  
+
   .abt-company__img img {
-    max-width: 100%;
     height: auto;
   }
 }
@@ -557,7 +574,7 @@ main {
   .status-container {
     color: #1b1c21;
     text-align: right;
-    font-family: TT Lakes;
+    font-family: TTLakes;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -623,34 +640,33 @@ main {
   .abt-company__wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
+    gap: 36px;
   }
-  
+
   .abt-company__info-text {
     flex: 1;
   }
-  
+
   .abt-company__img {
     flex: 1;
-    text-align: center; 
+    text-align: center;
   }
-  
+
   .abt-company__img img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
-
 }
 
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: #FF3E79;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ff3e79;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
